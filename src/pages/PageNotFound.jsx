@@ -1,0 +1,12 @@
+export default function PageNotFound() {
+    return (
+        <>
+        <title>Page Not Found</title>
+           <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+            <div className="not-found-page">
+                <h1 className="not-found-heading">404 - Page Not Found</h1>
+                <p className="not-found-message">Sorry, the page you are looking for does not exist.</p>
+            </div>
+        </>
+    )
+}

@@ -7,6 +7,7 @@ export default function CheckoutPage() {
         <title>Checkout Page</title>
           <CheckoutHeader/>
             <div className="checkout-page">
+                 <link rel="icon" type="image/svg+xml" href="/cart-favicon.png" />
                 <div className="page-title">Review your order</div>
 
                 <div className="checkout-grid">

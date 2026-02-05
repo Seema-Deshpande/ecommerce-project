@@ -103,13 +103,16 @@
   justify-content: end;
 }
 
-.header .orders-link {
+.header .orders-link  {
   color: white;
-
   display: flex;
   align-items: center;
   padding-left: 13px;
   padding-right: 13px;
+}
+
+.header .orders-link.active {
+  text-decoration: underline;
 }
 
 .header .orders-text {
