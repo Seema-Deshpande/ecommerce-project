@@ -20,8 +20,9 @@ export default function CheckoutPage({ cart }) {
     }, [])
     return (
         <>
+        {   console.log('checkout page render', cart) }
             <title>Checkout Page</title>
-            <CheckoutHeader />
+            <CheckoutHeader cart={cart} />
             <div className="checkout-page">
                 <link rel="icon" type="image/svg+xml" href="/cart-favicon.png" />
                 <div className="page-title">Review your order</div>
