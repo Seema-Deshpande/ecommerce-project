@@ -5,12 +5,12 @@ export function Product({ product, loadCart }) {
     const [quantity, setQuantity] = useState(1);
     const [addedToCart, setAddedToCart] = useState(false);
     const addToCart = async () => {
-      const response =   await axios.post('/api/cart-items', {
+       await axios.post('/api/cart-items', {
             productId: product.id,
             quantity,
         });
         await loadCart();
-       response.statusText === 'Created' && setAddedToCart(true);
+        setAddedToCart(true);
         setTimeout(() => {
             setAddedToCart(false);
         }, 1500)
@@ -66,6 +66,7 @@ export function Product({ product, loadCart }) {
             </div>
 
             <button className="add-to-cart-button button-primary"
+                data-testId="add-to-cart-button"
                 onClick={ addToCart}>
                 Add to Cart
             </button>
