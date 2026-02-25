@@ -18,7 +18,7 @@ export default function OrdersPage({ cart, loadCart }) {
             <title>Orders Page</title>
             <link rel="icon" type="image/svg+xml" href="/orders-favicon.png" />
             <Header cart={cart} />
-            <div className="orders-page">
+            <div className="orders-page" data-testid="orders-page">
                 <div className="page-title">Your Orders</div>
                 <OrdersGrid orders={orders} loadCart={loadCart} />
             </div>

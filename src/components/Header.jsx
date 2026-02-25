@@ -31,8 +31,10 @@ export default function Header({ cart }) {
             <div className="left-section">
                 <NavLink to="/" className="header-link active">
                     <img className="logo"
+                        data-testid="header-logo"
                         src="src/assets/images/logo-white.png" />
                     <img className="mobile-logo"
+                        data-testid="header-mobile-logo"
                         src="src/assets/images/mobile-logo-white.png" />
                 </NavLink>
             </div>
@@ -42,11 +44,13 @@ export default function Header({ cart }) {
                 className="search-bar" 
                 type="text" 
                 placeholder="Search" 
+                data-testid="search-bar"
                 onChange={updateSearch}
                 onKeyDown={keyDown}
                 />
                 <button 
                  className="search-button"
+                 data-testid="search-button"
                  onClick={handleSearch}
                  >
                     <img className="search-icon" src="src/assets/images/icons/search-icon.png" />
@@ -54,12 +58,14 @@ export default function Header({ cart }) {
             </div>
 
             <div className="right-section">
-                <NavLink className="orders-link header-link active" to="/orders">
+                <NavLink className="orders-link header-link active" to="/orders"
+                 data-testid="header-order-link"
+                >
 
                     <span className="orders-text">Orders</span>
                 </NavLink>
 
-                <NavLink className="cart-link header-link" to="/checkout">
+                <NavLink className="cart-link header-link" to="/checkout" data-testid="header-cart-link">
                     <img className="cart-icon" src="src/assets/images/icons/cart-icon.png" />
                     <div className="cart-quantity">{totalQuantity}</div>
                     <div className="cart-text">Cart</div>

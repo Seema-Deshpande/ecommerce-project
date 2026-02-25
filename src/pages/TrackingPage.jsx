@@ -26,32 +26,30 @@ export default function TrackingPage({ cart }) {
     const isPreparing = deliveryProgress < 33;
     const isShipped = deliveryProgress >= 33 && deliveryProgress < 100;
     const isDelivered = deliveryProgress >= 100;
-
-    console.log('delivery progress', deliveryProgress);
     return (
         <><title>Tracking Page</title>
          <link rel="icon" type="image/svg+xml" href="/tracking-favicon.png" />
             <Headers cart={cart} />
-                <div className="tracking-page">
+                <div className="tracking-page" data-testid="tracking-page">
                 <div className="order-tracking">
                     <Link className="back-to-orders-link link-primary" to="/orders">
                         View all orders
                     </Link>
 
-                    <div className="delivery-date">
+                    <div className="delivery-date" data-testid="delivery-date">
                         { deliveryProgress >= 100 ? 'Delivered on ' : 'Arriving on '}
                         {dayjs(orderProduct.estimatedDeliveryTimeMs).format('dddd, MMMM D')}
                     </div>
 
-                    <div className="product-info">
-                        {orderProduct.name}
+                    <div className="product-info" data-testid="product-name">
+                        {orderProduct.product.name}
                     </div>
 
-                    <div className="product-info">
+                    <div className="product-info" data-testid="product-quantity">
                         Quantity: {orderProduct.quantity}
                     </div>
 
-                    <img className="product-image" src={orderProduct.product.image} />
+                    <img className="product-image" data-testid="product-image" src={orderProduct.product.image} />
 
                     <div className="progress-labels-container">
                         <div className={`progress-label ${isPreparing ? 'current-status' : ''}`}>

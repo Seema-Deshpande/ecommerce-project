@@ -24,10 +24,9 @@ export default function CheckoutPage({ cart, loadCart }) {
     }, [cart])
     return (
         <>
-            {console.log('checkout page render', cart)}
             <title>Checkout Page</title>
             <CheckoutHeader cart={cart} />
-            <div className="checkout-page">
+            <div className="checkout-page" data-testid="checkout-page">
                 <link rel="icon" type="image/svg+xml" href="/cart-favicon.png" />
                 <div className="page-title">Review your order</div>
 
