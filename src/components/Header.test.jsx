@@ -27,9 +27,9 @@ describe("Header Component", () => {
             </MemoryRouter>
         )
         const headerLogo = screen.getByTestId('header-logo')
-        expect(headerLogo).toHaveAttribute('src', 'src/assets/images/logo-white.png')
+        expect(headerLogo).toHaveAttribute('src', 'logo-white.png')
         const mobileHeadeLogo = screen.getByTestId('header-mobile-logo')
-        expect(mobileHeadeLogo).toHaveAttribute('src','src/assets/images/mobile-logo-white.png')
+        expect(mobileHeadeLogo).toHaveAttribute('src','mobile-logo-white.png')
         const searchBar  = screen.getByTestId('search-bar')
         await user.click(searchBar);
          await user.clear(searchBar);

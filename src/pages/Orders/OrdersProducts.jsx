@@ -35,7 +35,7 @@ export function OrderProducts({ order, loadCart }) {
                             <button className="buy-again-button button-primary"
                                 data-testid="buy-again-button"
                                 onClick={addToCart}>
-                                <img className="buy-again-icon" src="src/assets/images/icons/buy-again.png" />
+                                <img className="buy-again-icon" src="icons/buy-again.png" />
                                 <span className="buy-again-message">Add to Cart</span>
                             </button>
                         </div>

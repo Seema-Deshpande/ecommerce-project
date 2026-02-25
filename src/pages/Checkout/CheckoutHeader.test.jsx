@@ -54,8 +54,8 @@ describe('CheckoutHeader Component', () => {
             <CheckoutHeader cart={cart} />
         </MemoryRouter>);
         const logo = screen.getByTestId('checkout-header-left-section').querySelector('img');
-        expect(logo).toHaveAttribute('src', 'src/assets/images/logo.png');
-        expect(screen.getByTestId('checkout-header-left-section').querySelector('.mobile-logo')).toHaveAttribute('src', 'src/assets/images/mobile-logo.png');
+        expect(logo).toHaveAttribute('src', 'logo.png');
+        expect(screen.getByTestId('checkout-header-left-section').querySelector('.mobile-logo')).toHaveAttribute('src', 'mobile-logo.png');
     });
     it('display the checkout lock icon', () => {
         render(
@@ -64,6 +64,6 @@ describe('CheckoutHeader Component', () => {
             </MemoryRouter>
         );
         const checkoutLockIcon = screen.getByTestId('checkout-header-right-section');
-        expect(checkoutLockIcon.querySelector('img')).toHaveAttribute('src', 'src/assets/images/icons/checkout-lock-icon.png');
+        expect(checkoutLockIcon.querySelector('img')).toHaveAttribute('src', 'icons/checkout-lock-icon.png');
     });
 })
